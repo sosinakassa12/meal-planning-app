@@ -48,93 +48,110 @@
         display: flex;
     }
 
-/* Style the navigation menu */
-nav {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  background: #ccc;
-  padding: 20px;
-}
+    /* Style left panel */
+    aside {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        background: #ccc;
+        padding: 20px;
+    }
 
-/*style the Meal type label*/
-.meal_type {
-    width: 120px;
-    height: 40px;
-    color: #000000;
-    font-family: "Helvetica";
-    font-weight: 400;
-    font-size: 26px;
-    text-align: left;
-}
+    /*style the Meal type label*/
+    .meal_type {
+        width: 120px;
+        height: 40px;
+        color: #000000;
+        font-family: "Helvetica";
+        font-weight: 400;
+        font-size: 26px;
+        text-align: left;
+    }
 
-/*style the Meal type dropdown*/
-.meal_type_menu {
-	width: 234px;
-	height: 34px;
-	padding: 4px 8px 4px 8px;
-	background: #ebebeb;
-	color: #232323;
-	border-color: #232323;
-	border-width: 1px;
-	border-style: solid;
-	border-radius: 4px 4px 4px 4px;
-	font-family: "Helvetica";
-	font-weight: 400;
-	font-size: 14px;
-	text-align: left;
-}
+    /*style the Meal type dropdown*/
+    .meal_type_menu {
+	    width: 234px;
+	    height: 34px;
+	    padding: 4px 8px 4px 8px;
+	    background: #fff;
+	    color: #232323;
+	    border-color: #232323;
+	    border-width: 1px;
+	    border-style: solid;
+	    border-radius: 4px 4px 4px 4px;
+	    font-family: "Helvetica";
+	    font-weight: 400;
+	    font-size: 14px;
+	    text-align: left;
+    }
 
-/*style the Ingredient label*/
-.ingredient {
-    width: 116px;
-    height: 36px;
-    color: #000000;
-    font-family: "Helvetica";
-    font-weight: 400;
-    font-size: 26px;
-    text-align: left;
-}
-/*style the Ingredient search box*/
-.ingredient_search_box
-{
-    width: 239px;
-    height: 41px;
-    padding: 8px 8px 8px 8px;
-    background: #fff; 
-}
+    /*style the Ingredient label*/
+    .ingredient {
+        width: 116px;
+        height: 36px;
+        color: #000000;
+        font-family: "Helvetica";
+        font-weight: 400;
+        font-size: 26px;
+        text-align: left;
+    }
+    /*style the Ingredient search box*/
+    .ingredient_search_box
+    {
+        width: 239px;
+        height: 41px;
+        padding: 8px 8px 8px 8px;
+        background: #fff; 
+    }
 
-/*style the image*/
-.image {
-    margin-top: 10px;
-}
+    /*style the image*/
+    .image {
+        margin-top: 10px;
+    }
 
+    /*style the horizontal menu*/
+    nav {
+        -webkit-flex: 1;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        background-color: #f4d6a6;
+        padding: 10px;
+    }
 
-/* Style the content */
-article {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  background-color: #fff;
-  padding: 10px;
-}
+    /*style the navigation menu optoins*/
+    nav > a {
+        width: 600px;
+        margin: 10px;
+        text-align: center;
+        line-height: 20px;
+    }
 
-/* Style the footer */
-footer {
-    background-color: #F9A826;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.2rem;
-}
+    /* Style the content */
+    article {
+        -webkit-flex: 3;
+        -ms-flex: 3;
+        flex: 3;
+        background-color: #fff;
+        padding: 10px;
+    }
 
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
-}
+    /* Style the footer */
+    footer {
+        background-color: #F9A826;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            section {
+                -webkit-flex-direction: column;
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
@@ -145,11 +162,16 @@ footer {
         <!--To do: Update href with account link-->
         <a href="xxx.html"> <button class="circle-btn">Account</button></a>
     </header>
+    <nav>
+        <a href="addrecipe.html">Add recipe</a>
+        <a href="xxx.html">Plan</a>
+        <a href="xxx.html">Cook</a>
+        <a href="xxx.html">Grocery list</a>
+    </nav>
     <!-- Main section -->
     <section>
         <!--Left panel-->
-
-        <nav>
+        <aside>
             <label for="mealtype" class="meal_type" >Meal type</label><br>
             <select id="mealtype" name="mealtype" class="meal_type_menu">
                 <option value="blank">Select to filter</option>
@@ -171,11 +193,11 @@ footer {
             <image-container>
                 <img src="https://placehold.co/240X160" alt="description of the image" class="image">
             </image-container>
-
-        </nav>
+        </aside>
         <article>
-            <p>navigation</p>
-            <p>add recipe</p>
+            <form action="xxx.php">
+
+            </form>
         </article>
         <article></article>
     </section>
